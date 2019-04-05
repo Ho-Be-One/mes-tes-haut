@@ -40,7 +40,7 @@
             <li class="list-group-item text-center pt-3 pb-0 pl-0 pr-0">
               <span class="float-left col-xl-6">
                 <img
-                  v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                  v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                   style="width: 80%;"
                   alt="icon météo"
                 >
@@ -98,7 +98,7 @@
               <div class="p-0 col-xl-6 float-left">
                 <span class="text-muted">
                   <img
-                    v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                    v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                     alt="icon météo"
                   >
                 </span>
@@ -129,7 +129,7 @@
               <div class="p-0 text-center col-xl-6">
                 <img
                   style="width: 100%;"
-                  v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                  v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                   alt="icon météo"
                 >
               </div>
@@ -177,7 +177,7 @@ export default {
       if (this.city) {
         axios
           .get(
-            "http://api.openweathermap.org/data/2.5/forecast?q=" +
+            "https://api.openweathermap.org/data/2.5/forecast?q=" +
               this.city +
               "&units=metric&APPID=75d6cb34749dd0617eb6e06e44317d0b"
           )
