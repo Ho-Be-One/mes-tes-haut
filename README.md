@@ -2,28 +2,14 @@
 
 ## Project setup
 ```
-npm install
+Mes tes haut, 
 ```
+## [A](src/img/mes-tes-haut.png)
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+Pour ce projet, j'ai utilisé le langage JS et un framework vuejs
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Voir [resultat](https://ho-be-one.github.io/mes-tes-haut/dist/index.html).

@@ -13,9 +13,7 @@
           >
           <div class="input-group-append">
             <button type="submit" v-on:click="getData" class="btn btn-secondary">
-              <strong>
-                <i class="fa fa-search"></i> Search
-              </strong>
+              <i class="fa fa-search"></i> Search
             </button>
           </div>
         </div>
@@ -26,32 +24,27 @@
             v-if="index % 40===0"
             :key="d.id"
           >
-            <li class="list-group-item text-center">
-              <h6 class="my-0 text-center">
-                <strong>
-                  <i class="fa fa-calendar"></i>
-                  {{formatdateDay(d.dt_txt)}}
-                  <i class="fa fa-clock-o"></i>
-                  {{formatdate(d.dt_txt)}}
-                </strong>
+            <li class="list-group-item pt-3 pl-0 pr-0 pb-3 border-0 text-center">
+              <h6 class="my-0 float-left">
+                {{formatdateDay(d.dt_txt)}}
+                <i class="fa fa-clock-o"></i>
+                {{formatdate(d.dt_txt)}}
               </h6>
             </li>
 
-            <li class="list-group-item text-center pt-3 pb-0 pl-0 pr-0">
+            <li class="list-group-item border-0 text-center pt-3 pb-0 pl-0 pr-0">
               <span class="float-left col-xl-6">
                 <img
-                  v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                  v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                   style="width: 80%;"
                   alt="icon météo"
                 >
               </span>
-              <span class="float-left col-xl-6 pt-2 pb-2">
-                <h1>
-                  <span class="text-muted">
-                    <strong>{{d.main.temp}}</strong>°C
-                  </span>
-                </h1>
-                <span class="text-muted">{{d.weather[0].description}}</span>
+              <span class="col-xl-6 pt-2 pb-2">
+                <span class="temp">
+                  <strong>{{d.main.temp}}</strong>°C
+                </span>
+                <span class="description">{{d.weather[0].description}}</span>
               </span>
               <span class="float-left col-xl-6 pt-2 pb-2 pr-5 pl-5">
                 <div class="float-left col-xl-6 pt-2 pb-2 pr-1 pl-4">
@@ -90,7 +83,7 @@
             v-for="(d, index) in info"
             v-if="index < 4"
             :key="d.id"
-            >
+          >
             <li
               class="line-bottom list-group-item text-center p-0"
               style="width: 100%; margin: 0 auto;"
@@ -98,7 +91,7 @@
               <div class="p-0 col-xl-6 float-left">
                 <span class="text-muted">
                   <img
-                    v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                    v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                     alt="icon météo"
                   >
                 </span>
@@ -118,27 +111,18 @@
         </div>
         <div class="cadWeek">
           <ul
-            class="list-group float-left p-0 m-0 col-xll-3"
+            class="list-group text-central float-left p-0 m-0 col-xll-3"
             v-for="(d, index) in info"
             v-if="index % 8===0"
             :key="d.id"
           >
             <li class="weekDate list-group-item">
-              <h6 class="my-0 text-center">{{formatdateWeek(d.dt_txt)}}</h6>
-              <hr>
-              <div class="p-0 text-center col-xl-6">
-                <img
-                  style="width: 100%;"
-                  v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
-                  alt="icon météo"
-                >
-              </div>
-
-              <div class="p-0 col-xl-6">
-                <span class="text-muted">
-                  <strong>{{d.main.temp}}</strong>°C
-                </span>
-              </div>
+              <h6 class="my-0">{{formatdateWeek(d.dt_txt)}}</h6>
+              <img
+                v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                alt="icon météo"
+              >
+              <span class="text-central">{{d.main.temp}}°C</span>
             </li>
           </ul>
         </div>
@@ -213,13 +197,31 @@ export default {
   margin: 0;
 }
 .weekDate {
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0px;
   border: 1px solid transparent;
 }
+
 .cadWeek {
   width: 100%;
-  float: left;
   border-top: 1px solid rgb(228, 228, 228);
+}
+.temp {
+  width: 50%;
+  text-align: center;
+  font-size: 70px;
+  float: left;
+  font-weight: 100;
+}
+.description {
+  width: 50%;
+  text-align: center;
+  float: left;
+  font-weight: 100;
+  font-size: 25px;
+  color: rgb(148, 147, 147);
+}
+.text-central {
+  text-align: center;
 }
 </style>
 
