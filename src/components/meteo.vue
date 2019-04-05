@@ -35,7 +35,7 @@
             <li class="list-group-item border-0 text-center pt-3 pb-0 pl-0 pr-0">
               <span class="float-left col-xl-6">
                 <img
-                  v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                  v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                   style="width: 80%;"
                   alt="icon météo"
                 >
@@ -91,7 +91,7 @@
               <div class="p-0 col-xl-6 float-left">
                 <span class="text-muted">
                   <img
-                    v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                    v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                     alt="icon météo"
                   >
                 </span>
@@ -119,7 +119,7 @@
             <li class="weekDate list-group-item">
               <h6 class="my-0">{{formatdateWeek(d.dt_txt)}}</h6>
               <img
-                v-bind:src="'http://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
+                v-bind:src="'https://openweathermap.org/img/w/'+weather(d.weather[0].icon)"
                 alt="icon météo"
               >
               <span class="text-central">{{d.main.temp}}°C</span>
