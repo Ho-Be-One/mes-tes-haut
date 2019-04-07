@@ -1,15 +1,16 @@
-# mes-tes-haut
+# Mes-tes-haut (la météo)
 
-## Project setup
-```
-Mes tes haut, 
-```
-## [A](src/img/mes-tes-haut.png)
+### Objectif du projet :
+Manipulation des API météo: 
+* Extration et affichage des données API météo (site [openweathermap](https://openweathermap.org/api))
+  #### Technologie utilisées
+* Langage **Javascript**
+* Framework **vuejs**
+* Framework **bootstrap** (cdn)
+![soldat](src/img/screenShot.png)
 
-### Compiles and hot-reloads for development
-```
-Pour ce projet, j'ai utilisé le langage JS et un framework vuejs
-```
+### Lien vers l'application 
+[Mes-tes-haut](https://ho-be-one.github.io/mes-tes-haut/dist/index.html).
 
-### Customize configuration
-Voir [resultat](https://ho-be-one.github.io/mes-tes-haut/dist/index.html).
+
+

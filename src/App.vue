@@ -8,6 +8,7 @@
 import meteo from './components/meteo.vue'
 import VueFilterDateFormat from 'vue-filter-date-format';
 
+
 export default {
   name: 'app',
   components: {
